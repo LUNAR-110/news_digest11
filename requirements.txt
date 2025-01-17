@@ -1,0 +1,8 @@
+flask
+requests
+beautifulsoup4
+nltk
+sumy
+playwright
+gunicorn
+pandas
