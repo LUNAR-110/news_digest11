@@ -22,6 +22,13 @@ if __name__ == "__main__":
 if not os.path.exists(os.path.join(nltk.data.path[0], 'tokenizers/punkt')):
     nltk.download('punkt')
 
+# Ensure the punkt tokenizer is available
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+
 
 
 
