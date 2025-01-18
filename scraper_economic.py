@@ -87,7 +87,7 @@ class EconomicScraper:
             with sync_playwright() as p:
                 browser = p.chromium.launch(headless=True)
                 page = browser.new_page()
-                page.goto(article_url, timeout=60000)
+                page.goto(article_url, timeout=12000)
                 page_content = page.content()
                 browser.close()
 
