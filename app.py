@@ -8,6 +8,16 @@ from sumy.utils import get_stop_words
 import re
 import nltk
 import concurrent.futures
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Update the app.run() at the bottom
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+
 
 # Ensure you have downloaded the necessary NLTK data files
 nltk.download('punkt')

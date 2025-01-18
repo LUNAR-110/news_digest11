@@ -6,3 +6,4 @@ sumy
 playwright
 gunicorn
 pandas
+python-dotenv
