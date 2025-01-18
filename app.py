@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, jsonify
 from bs4 import BeautifulSoup
 import requests
@@ -257,3 +258,4 @@ def fetch_economic_news():
 
 if __name__ == "__main__":
     app.run(debug=True)
+

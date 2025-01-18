@@ -1,3 +1,4 @@
+
 flask
 requests
 beautifulsoup4
@@ -6,4 +7,5 @@ sumy
 playwright
 gunicorn
 pandas
+
 python-dotenv

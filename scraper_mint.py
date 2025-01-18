@@ -1,3 +1,4 @@
+
 import requests
 from bs4 import BeautifulSoup
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -105,5 +106,6 @@ if __name__ == "__main__":
             print(f"Summary: {summary}")
     else:
         print("No articles found.")
+
 
 

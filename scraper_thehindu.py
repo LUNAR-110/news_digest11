@@ -1,3 +1,4 @@
+
 from bs4 import BeautifulSoup
 import requests
 from sumy.parsers.plaintext import PlaintextParser
@@ -120,6 +121,7 @@ def scrape_economy_news():
 
 if __name__ == "__main__":
     scrape_economy_news()
+
 
 
 

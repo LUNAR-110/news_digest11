@@ -1,3 +1,4 @@
+
 import logging
 from datetime import datetime
 import sqlite3
@@ -206,6 +207,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     scraper = EconomicScraper()
     scraper.scrape_economy_news()
+
 
 
 

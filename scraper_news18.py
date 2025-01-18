@@ -1,3 +1,4 @@
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -302,4 +303,3 @@ if __name__ == "__main__":
     print("Starting News18 Article Scraper...")
     print("Scraping articles with sufficient content from each category...")
     scraper = News18Scraper()
-    scraper.scrape_articles()

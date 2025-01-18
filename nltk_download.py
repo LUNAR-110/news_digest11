@@ -1,3 +1,4 @@
+
 import nltk
 
 def download_nltk_data():
@@ -15,4 +16,4 @@ def download_nltk_data():
             print(f"Error downloading {package}: {str(e)}")
 
 if __name__ == "__main__":
-    download_nltk_data()
+
