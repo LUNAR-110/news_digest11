@@ -123,7 +123,7 @@ def fetch_mint_headlines(url="https://www.livemint.com/latest-news", limit=5):
 # Home route
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_templates('index.html')
 
 # Route to fetch news from The Hindu BusinessLine
 @app.route('/fetch-hindu-news', methods=['GET'])
