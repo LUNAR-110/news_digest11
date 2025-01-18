@@ -43,8 +43,7 @@ app = Flask(__name__)
 # Importing the Financial Express scraper functions
 from scraper_financial import fetch_financial_express_headlines, fetch_article_content, summarize_article_sumy
 
-# Importing the EconomicScraper class
-from scraper_economic import EconomicScraper
+
 
 # Integrating News18Scraper
 from scraper_news18 import News18Scraper
@@ -235,38 +234,7 @@ def fetch_news18_news():
 
     return jsonify(news_data)
 
-# Route to fetch economic news
-@app.route('/fetch-economic-news', methods=['GET'])
-def fetch_economic_news():
-    scraper = EconomicScraper()
-    headlines = scraper.fetch_headlines()
 
-    if not headlines:
-        return jsonify({'error': 'No headlines found for Economic Times.'}), 500
-
-    news_data = []
-
-    # Use ThreadPoolExecutor for concurrent fetching of articles
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        future_to_article = {executor.submit(scraper.fetch_article_details, article['url']): article for article in headlines}
-
-        for future in concurrent.futures.as_completed(future_to_article):
-            article = future_to_article[future]
-            try:
-                summary = future.result()
-                if summary.startswith("Error"):
-                    continue
-
-                news_data.append({
-                    'headline': article['headline'],
-                    'url': article['url'],
-                    'source': 'Economic Times',
-                    'summary': summary
-                })
-            except Exception as e:
-                print(f"Error fetching article details for {article['headline']}: {e}")
-
-    return jsonify(news_data)
 
 
 
