@@ -13,7 +13,7 @@ async function fetchAllArticles() {
             "/fetch-mint-news",
             "/fetch-financial-news",
             "/fetch-news18-news",
-            "/fetch-economic-news"
+          
         ];
 
         const articlesContainer = document.getElementById("articles");
