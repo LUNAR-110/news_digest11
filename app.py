@@ -35,6 +35,8 @@ except LookupError:
 # Ensure you have downloaded the necessary NLTK data files
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt_tab')
+
 
 app = Flask(__name__)
 
