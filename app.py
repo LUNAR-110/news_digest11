@@ -18,6 +18,10 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
 
+if not os.path.exists(os.path.join(nltk.data.path[0], 'tokenizers/punkt')):
+    nltk.download('punkt')
+
+
 
 
 # Ensure you have downloaded the necessary NLTK data files
